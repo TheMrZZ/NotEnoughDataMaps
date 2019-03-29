@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "take_damage": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:villager",
+                    "nbt": "{Tags:[\"shop_seller\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "shop_creator:shop_to_chest/on_villager_hit"
+    }
+}
