@@ -1,0 +1,6 @@
+{
+    "values": [
+        "motion_animator:creation/every_tick_",
+        "rotation_animator:creation/every_tick_"
+    ]
+}

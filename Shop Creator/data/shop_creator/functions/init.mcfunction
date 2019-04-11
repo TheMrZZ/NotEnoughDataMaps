@@ -1,6 +1,6 @@
 # Used for raycast
-scoreboard objectives add rightclick minecraft.used:minecraft.carrot_on_a_stick
-scoreboard players reset * rightclick
+scoreboard objectives add rightclick_shop minecraft.used:minecraft.carrot_on_a_stick
+scoreboard players reset * rightclick_shop
 advancement revoke @a only shop_creator:hit_shop_seller
 
 # Distance for raycast

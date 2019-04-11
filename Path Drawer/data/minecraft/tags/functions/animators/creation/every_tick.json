@@ -1,7 +1,0 @@
-{
-    "values": [
-        "motion_animator:creation/every_tick",
-        "rotation_animator:creation/every_tick",
-        "pos_animator:creation/every_tick"
-    ]
-}

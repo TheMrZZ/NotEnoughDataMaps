@@ -1,7 +1,0 @@
-{
-    "values": [
-        "motion_animator:creation/first_tick",
-        "rotation_animator:creation/first_tick",
-        "pos_animator:creation/first_tick"
-    ]
-}

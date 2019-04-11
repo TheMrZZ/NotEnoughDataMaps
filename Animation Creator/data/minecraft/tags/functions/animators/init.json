@@ -1,0 +1,6 @@
+{
+    "values": [
+        "motion_animator:init",
+        "rotation_animator:init"
+    ]
+}
