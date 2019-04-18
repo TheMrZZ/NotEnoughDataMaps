@@ -13,12 +13,14 @@ data modify entity @e[name=temp_tags_holder,limit=1] Tags append from entity @s 
 execute store result score new_tags animator_temp run tag @e[name=temp_tags_holder,limit=1] list
 
 # If the numbers are different, this means the selection tag is missing.
-execute unless score new_tags animator_temp = initial_tags animator_temp run data modify entity @s ArmorItems[0].tag.Info[0].SelectionBox set from entity @s ArmorItems[0].tag.Info[0].NotSelected
+execute unless score new_tags animator_temp = initial_tags animator_temp run data modify entity @s ArmorItems[0].tag.Info[0].SelectionAction set from entity @s ArmorItems[0].tag.Info[0].NotSelected
+execute unless score new_tags animator_temp = initial_tags animator_temp run data modify entity @s ArmorItems[0].tag.Info[0].SelectionBox set value '{"text":"[ ]", "color":"red"}'
 
 # If the numbers are equals, this means the selection tag is here.
-execute if score new_tags animator_temp = initial_tags animator_temp run data modify entity @s ArmorItems[0].tag.Info[0].SelectionBox set from entity @s ArmorItems[0].tag.Info[0].Selected
+execute if score new_tags animator_temp = initial_tags animator_temp run data modify entity @s ArmorItems[0].tag.Info[0].SelectionAction set from entity @s ArmorItems[0].tag.Info[0].Selected
+execute if score new_tags animator_temp = initial_tags animator_temp run data modify entity @s ArmorItems[0].tag.Info[0].SelectionBox set value '{"text":"[✗]", "color":"green"}'
 
-tellraw @a ["",{"text":"    →","color":"gold"},{"text":" "},{"nbt":"ArmorItems[0].tag.Info[0].Name","entity":"@s","color": "green"},{"text":" "},{"nbt":"ArmorItems[0].tag.Info[0].SelectionBox","entity":"@s","interpret":true}]
+tellraw @a ["",{"text":"    →","color":"gold"},{"text":" "},{"nbt":"ArmorItems[0].tag.Info[0].Name","entity":"@s","color": "green"},{"text":" "},{"nbt":"ArmorItems[0].tag.Info[0].SelectionAction","entity":"@s","interpret":true,"extra":[{"nbt":"ArmorItems[0].tag.Info[0].SelectionBox","entity":"@s","interpret":true}]}]
 data remove entity @s ArmorItems[0].tag.Info[0]
 
 execute if data entity @s ArmorItems[0].tag.Info[0] run function animation_creator:display/animators_choice

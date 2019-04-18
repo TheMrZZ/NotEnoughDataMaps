@@ -3,7 +3,7 @@
 #
 # @target an Armor Stand with every name of loaded animators
 
-tellraw @a ["",{"text":"    →","color":"gold"},{"text":" "},{"nbt":"ArmorItems[0].tag.Info[0].Name","entity":"@s","color": "green"},{"text":" "},{"nbt":"ArmorItems[0].tag.Info[0].Help","entity":"@s","interpret":true},{"text":" ✓", "color": "green", "bold": true}]
+tellraw @a ["",{"text":"    →","color":"gold"},{"text":" "},{"nbt":"ArmorItems[0].tag.Info[0].Name","entity":"@s","color": "green"},{"text":" "},{"nbt":"ArmorItems[0].tag.Info[0].Help","entity":"@s","interpret":true,"extra": [{"text":"ⓘ","bold":true,"color":"yellow","hoverEvent":{"action":"show_text","value":"Click to get additional information!"}}]},{"text":" ✓", "color": "green", "bold": true}]
 data remove entity @s ArmorItems[0].tag.Info[0]
 
 execute if data entity @s ArmorItems[0].tag.Info[0] run function animation_creator:display/loaded_animators

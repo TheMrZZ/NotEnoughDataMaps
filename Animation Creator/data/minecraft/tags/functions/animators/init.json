@@ -1,6 +1,7 @@
 {
     "values": [
         "motion_animator:init",
-        "rotation_animator:init"
+        "rotation_animator:init",
+        "smart_trim_animator:init"
     ]
 }

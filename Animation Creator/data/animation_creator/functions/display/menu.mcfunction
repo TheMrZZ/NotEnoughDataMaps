@@ -20,7 +20,8 @@ tellraw @s [{"text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n========= [Choose your ani
 execute as @e[name=animators_info_holder] run function animation_creator:display/animators_choice
 
 # Display the end of the menu
-tellraw @s [{"text":"\n> Click ", "color": "gray"}, {"text": "here to confirm", "color": "gold","clickEvent":{"action":"run_command","value":"/tag @s add confirm_animators"}}, {"text":"."}]
+tellraw @s [{"text":"\n> Click ", "color": "gray"}, {"text": "here to cancel", "color": "red","clickEvent":{"action":"run_command","value":"/function animation_creator:create_anim/abort"}}, {"text":"."}]
+tellraw @s [{"text":"> Click ", "color": "gray"}, {"text": "here to confirm", "color": "gold","clickEvent":{"action":"run_command","value":"/tag @s add confirm_animators"}}, {"text":"."}]
 tellraw @s [{"text": "=========================================", "color": "green"}]
 
 # Kill the tags holder, and the information holder

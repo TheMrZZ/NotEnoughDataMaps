@@ -34,10 +34,6 @@ scoreboard objectives add entity_id dummy
 team add no_collision
 team modify no_collision collisionRule never
 
-# Constants
-scoreboard objectives add const dummy
-scoreboard players set -1 const -1
-
 # Debug enabled
 scoreboard objectives add debug_enabled trigger
 

@@ -22,7 +22,8 @@ scoreboard players set @s time 0
 # First, create the initial state frame
 data modify entity @e[name=anim_data,tag=current,limit=1] ArmorItems[0].tag.First set value {}
 
-# Then call the different animators
+# Then call the different animators "before" function, then the first tick
+function #minecraft:animators/creation/before
 function #minecraft:animators/creation/first_tick
 
 # Give the player a carrot on a stick. By right-clicking it, he will stop the animation.

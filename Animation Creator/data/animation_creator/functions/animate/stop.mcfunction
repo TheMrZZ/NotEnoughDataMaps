@@ -7,5 +7,7 @@ tag @s remove animated
 
 tag @s add animation_end
 
+function #minecraft:animators/animation/end
+
 # In case of an Armor Stand, freeze it back
 data merge entity @s {NoGravity:1b,Marker:1b}

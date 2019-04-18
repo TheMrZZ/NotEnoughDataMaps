@@ -13,7 +13,7 @@
 ######### INFORMATION SECTION #########
 
 # This section stores information about the Animator itself
-data modify entity @s ArmorItems[0].tag.Info append value {Name:"Motion's Animator"}
+data modify entity @s ArmorItems[0].tag.Info append value {Name:"Motion Animator"}
 data modify entity @s ArmorItems[0].tag.Info[-1] merge value {Tag:"motion_animator"}
 data modify entity @s ArmorItems[0].tag.Info[-1] merge value {Author:"TheMrZZ"}
 data modify entity @s ArmorItems[0].tag.Info[-1] merge value {AuthorUrl:"reddit.com/u/TheMrZZ0"}
@@ -21,14 +21,14 @@ data modify entity @s ArmorItems[0].tag.Info[-1] merge value {AuthorUrl:"reddit.
 ######### HELP SECTION #########
 # This section determines which function must be called to display help about the animator.
 # /!\ Do not touch anything except the function name. Else it won't work.
-data modify entity @s ArmorItems[0].tag.Info[-1] merge value {Help:'{"clickEvent":{"value":"/function motion_animator:help","action":"run_command"},"text":"ⓘ","bold":true,"color":"yellow","hoverEvent":{"action":"show_text","value":"Click to get additional informations!"}}'}
+data modify entity @s ArmorItems[0].tag.Info[-1] merge value {Help:'{"clickEvent":{"value":"/function motion_animator:help","action":"run_command"},"text":""}'}
 
 
 ######### TAG SECTION #########
 # /!\ You have to change two times the name of the tag, once in each command
 
 # Message displayed when the animator is not selected
-data modify entity @s ArmorItems[0].tag.Info[-1] merge value {NotSelected:'{"clickEvent":{"value":"/tag @s add motion_animator","action":"run_command"}, "text":"[ ]"}'}
+data modify entity @s ArmorItems[0].tag.Info[-1] merge value {NotSelected:'{"clickEvent":{"value":"/tag @s add motion_animator","action":"run_command"},"text":""}'}
 
 # Message displayed when the animator is selected
-data modify entity @s ArmorItems[0].tag.Info[-1] merge value {Selected:'{"clickEvent":{"value":"/tag @s remove motion_animator","action":"run_command"}, "text":"[✗]", "color":"green"}'}
+data modify entity @s ArmorItems[0].tag.Info[-1] merge value {Selected:'{"clickEvent":{"value":"/tag @s remove motion_animator","action":"run_command"},"text":""}'}

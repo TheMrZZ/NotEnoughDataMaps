@@ -3,7 +3,7 @@
 # @target an animated entity, needing to play the next animation
 
 # Run the different animators
-function #minecraft:animators/animate/new_animation
+function #minecraft:animators/animation/new_frame
 
 # Remove the animation from the stack
 data remove entity @s ArmorItems[0].tag.Current[0]

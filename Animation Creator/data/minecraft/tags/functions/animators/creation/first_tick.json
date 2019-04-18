@@ -1,6 +1,6 @@
 {
     "values": [
-        "motion_animator:creation/first_tick_",
-        "rotation_animator:creation/first_tick_"
+        "motion_animator:creation_/first_tick",
+        "rotation_animator:creation_/first_tick"
     ]
 }

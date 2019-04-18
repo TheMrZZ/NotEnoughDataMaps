@@ -1,6 +1,7 @@
 {
     "values": [
-        "motion_animator:creation/every_tick_",
-        "rotation_animator:creation/every_tick_"
+        "motion_animator:creation_/every_tick",
+        "rotation_animator:creation_/every_tick",
+        "smart_trim_animator:creation_/every_tick"
     ]
 }

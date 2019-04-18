@@ -10,6 +10,9 @@ scoreboard players set @s create_animation 0
 # Call the different animators end function
 function #minecraft:animators/creation/last_tick
 
+# Call the different animators "after" function
+function #minecraft:animators/creation/after
+
 ## Create the new entities & give them the same id 
 execute as @e[name=anim_data,tag=current,limit=1] at @s run summon minecraft:villager ~ ~ ~ {Invulnerable:1b,Tags:["new", "can_be_animated"],Attributes:[{Base:0.0d,Name:"generic.movementSpeed"}],Team:"no_collision",Passengers:[{id:"minecraft:armor_stand",Invisible:1b,Small:1b,Marker:1b,NoGravity:1b,CustomName:'"animated"',Tags:["new"]}]}
 scoreboard players operation @e[tag=new,limit=2,sort=nearest] entity_id = new entity_id

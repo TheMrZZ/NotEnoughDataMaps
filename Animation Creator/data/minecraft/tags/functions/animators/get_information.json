@@ -1,6 +1,8 @@
 {
     "values": [
         "motion_animator:get_information",
-        "rotation_animator:get_information"
+        "rotation_animator:get_information",
+        "smart_trim_animator:get_information",
+        "loop_animator:get_information"
     ]
 }
